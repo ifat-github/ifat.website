@@ -15,7 +15,6 @@ class SocialProfile extends Component {
     }
 }
 
-
 class SocialProfiles extends Component {
     render() {
         return (

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.jpeg'
+import profile from './assets/profile.jpeg';
+import down from './assets/down.jpg';
 
 class App extends Component {
     /* constructor() {
@@ -25,6 +26,8 @@ class App extends Component {
     render() {
         return (
             <div>
+                <img src={down} className='down' />
+                <hr />
                 <img src={profile} alt='profile' className='profile' />
                 <h1>Hello!</h1>
                 <p>My name is Ifat. I'm a software developer.</p>
@@ -34,7 +37,6 @@ class App extends Component {
                         <div>
                             <p>I live in Petah-Tiqwa, and code every day.</p>
                             <p>My favorite language is JavaScript, and I think React.js is awesome.</p>
-                            <p>Besides coding, I also love music and pizza!</p>
                             <button onClick={this.toggleDisplayBio}>Show Less</button>
                         </div>
                     ) : (

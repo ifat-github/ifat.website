@@ -3,7 +3,6 @@ import PROJECTS from './data/projects';
 
 class Project extends Component {
     render() {
-        console.log('this.props', this.props);
         /*
         const title = this.props.project.title;        
         const image = this.props.project.image;
@@ -12,7 +11,7 @@ class Project extends Component {
         const { title, image, description, link } = this.props.project;
 
         return (
-            //the project data will be located in the project props instead of the component props 
+            //the project data will be located in the project props 
             <div style={{ display: 'inline-block', width: 300, margin: 10 }}>
                 <h3>{title}</h3>
                 <img src={image} alt='profile' style={{ width: 200, height: 120 }}/>
