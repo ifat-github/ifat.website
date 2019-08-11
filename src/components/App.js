@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.jpeg';
-import down from './assets/down.jpg';
+import profile from '../assets/profile.jpeg';
+import down from '../assets/down.jpg';
+import Title from './Title.js';
+import Jokes from './Jokes.js'
 
 class App extends Component {
     /* constructor() {
@@ -30,7 +32,8 @@ class App extends Component {
                 <hr />
                 <img src={profile} alt='profile' className='profile' />
                 <h1>Hello!</h1>
-                <p>My name is Ifat. I'm a software developer.</p>
+                <p>My name is Ifat.</p>
+                <Title /> 
                 <p>I'm always looking forward to working on meaningful projects.</p>
                 {
                     this.state.displayBio ? (
@@ -48,6 +51,8 @@ class App extends Component {
                 <hr />
                 <Projects />
                 <SocialProfiles />
+                <hr />
+                <Jokes />
             </div>
         )
     }
