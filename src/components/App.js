@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import profile from '../assets/profile.jpeg';
-import down from '../assets/down.jpg';
+import down from '../assets/down.png';
 import Title from './Title.js';
 import Jokes from './Jokes.js'
 
