@@ -24189,8 +24189,8 @@ var _default = SocialProfiles;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../data/socialProfiles":"data/socialProfiles.js"}],"assets/profile.jpeg":[function(require,module,exports) {
 module.exports = "/profile.157bb0a7.jpeg";
-},{}],"assets/down.jpg":[function(require,module,exports) {
-module.exports = "/down.1f21988f.jpg";
+},{}],"assets/down.png":[function(require,module,exports) {
+module.exports = "/down.0587e768.png";
 },{}],"components/Title.js":[function(require,module,exports) {
 "use strict";
 
@@ -24358,6 +24358,8 @@ function (_Component) {
         return _this.setState({
           jokes: json
         });
+      }).catch(function (error) {
+        return alert(error.message);
       });
     });
 
@@ -24375,6 +24377,8 @@ function (_Component) {
         return _this2.setState({
           joke: json
         });
+      }).catch(function (error) {
+        return alert(error.message);
       });
     }
   }, {
@@ -24417,7 +24421,7 @@ var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 
 var _profile = _interopRequireDefault(require("../assets/profile.jpeg"));
 
-var _down = _interopRequireDefault(require("../assets/down.jpg"));
+var _down = _interopRequireDefault(require("../assets/down.png"));
 
 var _Title = _interopRequireDefault(require("./Title.js"));
 
@@ -24501,7 +24505,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/down.jpg":"assets/down.jpg","./Title.js":"components/Title.js","./Jokes.js":"components/Jokes.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/down.png":"assets/down.png","./Title.js":"components/Title.js","./Jokes.js":"components/Jokes.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -24573,7 +24577,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/roboto-condensed.light.ttf":[["roboto-condensed.light.6709adf4.ttf","assets/roboto-condensed.light.ttf"],"assets/roboto-condensed.light.ttf"],"./assets/economica-bold.ttf":[["economica-bold.12a9e27d.ttf","assets/economica-bold.ttf"],"assets/economica-bold.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./assets/roboto-condensed.light.ttf":[["roboto-condensed.light.6709adf4.ttf","assets/roboto-condensed.light.ttf"],"assets/roboto-condensed.light.ttf"],"./assets/economica-bold.ttf":[["economica-bold.12a9e27d.ttf","assets/economica-bold.ttf"],"assets/economica-bold.ttf"],"./assets/BreeSerif-Regular.ttf":[["BreeSerif-Regular.8303670d.ttf","assets/BreeSerif-Regular.ttf"],"assets/BreeSerif-Regular.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -24587,6 +24591,15 @@ require("./index.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom.default.render(_react.default.createElement(_App.default, null), document.getElementById('root'));
+/* new Promise(resolve => {
+    setTimeout(() => {
+        console.log('bears');
+        resolve();
+    }, 2000);
+}).then(() => {
+    console.log('beets');
+    console.log('battlestar galactica');
+}); */
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/App":"components/App.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -24614,7 +24627,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42541" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42365" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
