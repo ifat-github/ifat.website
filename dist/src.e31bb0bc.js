@@ -29440,167 +29440,7 @@ var createBrowserHistory = function createBrowserHistory() {
 };
 
 exports.default = createBrowserHistory;
-},{"warning":"../node_modules/history/node_modules/warning/browser.js","invariant":"../node_modules/invariant/browser.js","./LocationUtils":"../node_modules/history/LocationUtils.js","./PathUtils":"../node_modules/history/PathUtils.js","./createTransitionManager":"../node_modules/history/createTransitionManager.js","./DOMUtils":"../node_modules/history/DOMUtils.js"}],"components/Header.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Header = function Header(_ref) {
-  var children = _ref.children;
-  var style = {
-    display: 'inline-block',
-    margin: 10,
-    marginBottom: 30
-  };
-  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
-    style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, "Home")), _react.default.createElement("h3", {
-    style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/jokes"
-  }, "Jokes"))), children);
-};
-
-var _default = Header;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js"}],"components/Jokes.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _Header = _interopRequireDefault(require("./Header"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//const Joke = ({ joke }) => {
-//const { setup, punchline } = joke;
-var Joke = function Joke(_ref) {
-  var _ref$joke = _ref.joke,
-      setup = _ref$joke.setup,
-      punchline = _ref$joke.punchline;
-  return _react.default.createElement("p", {
-    style: {
-      margin: 20
-    }
-  }, setup, " ", _react.default.createElement("em", null, punchline));
-};
-
-var Jokes =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Jokes, _Component);
-
-  function Jokes() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Jokes);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Jokes)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      joke: {},
-      jokes: []
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "fetchJokes", function () {
-      fetch('https://official-joke-api.appspot.com/random_ten').then(function (response) {
-        return response.json();
-      }).then(function (json) {
-        return _this.setState({
-          jokes: json
-        });
-      }).catch(function (error) {
-        return alert(error.message);
-      });
-    });
-
-    return _this;
-  }
-
-  _createClass(Jokes, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      fetch('https://official-joke-api.appspot.com/random_joke').then(function (response) {
-        return response.json();
-      }).then(function (json) {
-        return _this2.setState({
-          joke: json
-        });
-      }).catch(function (error) {
-        return alert(error.message);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
-        joke: this.state.joke
-      }), _react.default.createElement("hr", null), _react.default.createElement("h3", null, "Want 10 new jokes?"), _react.default.createElement("button", {
-        onClick: this.fetchJokes
-      }, "Click me!"), this.state.jokes.map(function (joke) {
-        return (//const { id, setup, punchline } = joke;
-          //return <p key={id}>{setup} <em>{punchline}</em></p>
-          _react.default.createElement(Joke, {
-            key: joke.id,
-            joke: joke
-          })
-        );
-      }));
-    }
-  }]);
-
-  return Jokes;
-}(_react.Component);
-
-var _default = Jokes;
-exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Header":"components/Header.js"}],"assets/project1.png":[function(require,module,exports) {
+},{"warning":"../node_modules/history/node_modules/warning/browser.js","invariant":"../node_modules/invariant/browser.js","./LocationUtils":"../node_modules/history/LocationUtils.js","./PathUtils":"../node_modules/history/PathUtils.js","./createTransitionManager":"../node_modules/history/createTransitionManager.js","./DOMUtils":"../node_modules/history/DOMUtils.js"}],"assets/project1.png":[function(require,module,exports) {
 module.exports = "/project1.0e13da1c.png";
 },{}],"assets/project2.png":[function(require,module,exports) {
 module.exports = "/project2.d48872d8.png";
@@ -29952,7 +29792,7 @@ function (_Component) {
         onClick: this.toggleDisplayBio
       }, "Show Less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
-      }, "Read More")), _react.default.createElement("hr", null), _react.default.createElement(_Projects.default, null), _react.default.createElement(_SocialProfiles.default, null));
+      }, "Read More")), _react.default.createElement("hr", null), _react.default.createElement(_SocialProfiles.default, null));
     }
   }]);
 
@@ -29961,7 +29801,167 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/down.png":"assets/down.png","./Title.js":"components/Title.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/down.png":"assets/down.png","./Title.js":"components/Title.js"}],"components/Jokes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//const Joke = ({ joke }) => {
+//const { setup, punchline } = joke;
+var Joke = function Joke(_ref) {
+  var _ref$joke = _ref.joke,
+      setup = _ref$joke.setup,
+      punchline = _ref$joke.punchline;
+  return _react.default.createElement("p", {
+    style: {
+      margin: 20
+    }
+  }, setup, " ", _react.default.createElement("em", null, punchline));
+};
+
+var Jokes =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Jokes, _Component);
+
+  function Jokes() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, Jokes);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Jokes)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      joke: {},
+      jokes: []
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "fetchJokes", function () {
+      fetch('https://official-joke-api.appspot.com/random_ten').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this.setState({
+          jokes: json
+        });
+      }).catch(function (error) {
+        return alert(error.message);
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(Jokes, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch('https://official-joke-api.appspot.com/random_joke').then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this2.setState({
+          joke: json
+        });
+      }).catch(function (error) {
+        return alert(error.message);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
+        joke: this.state.joke
+      }), _react.default.createElement("hr", null), _react.default.createElement("h3", null, "Want 10 new jokes?"), _react.default.createElement("button", {
+        onClick: this.fetchJokes
+      }, "Click me!"), this.state.jokes.map(function (joke) {
+        return (//const { id, setup, punchline } = joke;
+          //return <p key={id}>{setup} <em>{punchline}</em></p>
+          _react.default.createElement(Joke, {
+            key: joke.id,
+            joke: joke
+          })
+        );
+      }));
+    }
+  }]);
+
+  return Jokes;
+}(_react.Component);
+
+var _default = Jokes;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(_ref) {
+  var children = _ref.children;
+  var style = {
+    display: 'inline-block',
+    margin: 10,
+    marginBottom: 30
+  };
+  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "Home")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/projects"
+  }, "Projects")), _react.default.createElement("h3", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/jokes"
+  }, "Geeky Jokes"))), children);
+};
+
+var _default = Header;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -30044,9 +30044,11 @@ var _reactRouterDom = require("react-router-dom");
 
 var _createBrowserHistory = _interopRequireDefault(require("history/createBrowserHistory"));
 
+var _App = _interopRequireDefault(require("./components/App"));
+
 var _Jokes = _interopRequireDefault(require("./components/Jokes"));
 
-var _App = _interopRequireDefault(require("./components/App"));
+var _Projects = _interopRequireDefault(require("./components/Projects"));
 
 var _Header = _interopRequireDefault(require("./components/Header"));
 
@@ -30063,6 +30065,11 @@ _reactDom.default.render(_react.default.createElement(_reactRouterDom.Router, {
     return _react.default.createElement(_Header.default, null, _react.default.createElement(_App.default, null));
   }
 }), _react.default.createElement(_reactRouterDom.Route, {
+  path: "/projects",
+  render: function render() {
+    return _react.default.createElement(_Header.default, null, _react.default.createElement(_Projects.default, null));
+  }
+}), _react.default.createElement(_reactRouterDom.Route, {
   path: "/jokes",
   render: function render() {
     return _react.default.createElement(_Header.default, null, _react.default.createElement(_Jokes.default, null));
@@ -30077,7 +30084,7 @@ _reactDom.default.render(_react.default.createElement(_reactRouterDom.Router, {
     console.log('beets');
     console.log('battlestar galactica');
 }); */
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/Jokes":"components/Jokes.js","./components/App":"components/App.js","./components/Header":"components/Header.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/App":"components/App.js","./components/Jokes":"components/Jokes.js","./components/Projects":"components/Projects.js","./components/Header":"components/Header.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -30105,7 +30112,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45363" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33227" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
