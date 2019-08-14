@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Switch, Route } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+import Jokes from './components/Jokes';
 import App from './components/App';
+import Header from './components/Header';
 import './index.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(
+    <Router history={createBrowserHistory()}>
+        <Switch>
+            <Route exact path='/' render={() => <Header><App /></Header>} />
+            <Route path='/jokes' render={() => <Header><Jokes /></Header>} />
+        </Switch>
+    </Router>,
+    document.getElementById('root')
+);
 
 /* new Promise(resolve => {
     setTimeout(() => {
@@ -14,4 +26,3 @@ ReactDOM.render(<App/>, document.getElementById('root'));
     console.log('beets');
     console.log('battlestar galactica');
 }); */
-

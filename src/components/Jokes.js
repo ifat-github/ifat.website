@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './Header';
 
 //const Joke = ({ joke }) => {
     //const { setup, punchline } = joke;
