@@ -29781,9 +29781,17 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("img", {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
+        style: {
+          height: 220
+        }
+      }), _react.default.createElement("img", {
         src: _down.default,
         className: "down"
+      }), _react.default.createElement("div", {
+        style: {
+          height: 220
+        }
       }), _react.default.createElement("hr", null), _react.default.createElement("img", {
         src: _profile.default,
         alt: "profile",
@@ -30112,7 +30120,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33227" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37959" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

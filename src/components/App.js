@@ -27,7 +27,13 @@ class App extends Component {
     render() {
         return (
             <div>
+                <div style={{ height: 220 }}>
+
+                </div>
                 <img src={down} className='down' />
+                <div style={{ height: 220 }}>
+
+                </div>
                 <hr />
                 <img src={profile} alt='profile' className='profile' />
                 <h1>Hello!</h1>
