@@ -29442,10 +29442,8 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 },{"warning":"../node_modules/history/node_modules/warning/browser.js","invariant":"../node_modules/invariant/browser.js","./LocationUtils":"../node_modules/history/LocationUtils.js","./PathUtils":"../node_modules/history/PathUtils.js","./createTransitionManager":"../node_modules/history/createTransitionManager.js","./DOMUtils":"../node_modules/history/DOMUtils.js"}],"assets/project1.png":[function(require,module,exports) {
 module.exports = "/project1.0e13da1c.png";
-},{}],"assets/project2.png":[function(require,module,exports) {
-module.exports = "/project2.d48872d8.png";
-},{}],"assets/project3.png":[function(require,module,exports) {
-module.exports = "/project3.592b562e.png";
+},{}],"assets/spotify.png":[function(require,module,exports) {
+module.exports = "/spotify.06d0132b.png";
 },{}],"data/projects.js":[function(require,module,exports) {
 "use strict";
 
@@ -29456,9 +29454,7 @@ exports.default = void 0;
 
 var _project = _interopRequireDefault(require("../assets/project1.png"));
 
-var _project2 = _interopRequireDefault(require("../assets/project2.png"));
-
-var _project3 = _interopRequireDefault(require("../assets/project3.png"));
+var _spotify = _interopRequireDefault(require("../assets/spotify.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29468,10 +29464,16 @@ var PROJECTS = [{
   description: 'A java http servlet I built, involving JSP, javascript and core web dev concepts!',
   link: 'https://github.com/ifat-github/Company-and-Products-Registration-and-sign-in',
   image: _project.default
+}, {
+  id: 2,
+  title: 'Music Master',
+  description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
+  link: './music-master',
+  image: _spotify.default
 }];
 var _default = PROJECTS;
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png","../assets/project2.png":"assets/project2.png","../assets/project3.png":"assets/project3.png"}],"components/Projects.js":[function(require,module,exports) {
+},{"../assets/project1.png":"assets/project1.png","../assets/spotify.png":"assets/spotify.png"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29510,7 +29512,6 @@ var Project = function Project(props) {
       src: image,
       alt: "profile",
       style: {
-        width: 200,
         height: 120
       }
     })), _react.default.createElement("p", null, description))
@@ -29964,11 +29965,7 @@ var Header = function Header(_ref) {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/jokes"
-  }, "Geeky Jokes")), _react.default.createElement("h3", {
-    style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
-    to: "/music-master"
-  }, "Music Master"))), children);
+  }, "Geeky Jokes"))), children);
 };
 
 var _default = Header;
@@ -30530,7 +30527,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34493" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40895" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

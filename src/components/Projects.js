@@ -15,7 +15,7 @@ const Project = (props) => {
         <div style={{ display: 'inline-block', width: 300, margin: 10 }}>
             <a href={link}>
                 <h3>{title}</h3>
-                <img src={image} alt='profile' style={{ width: 200, height: 120 }}/>
+                <img src={image} alt='profile' style={{ height: 120 }}/>
             </a>
             <p>{description}</p>
         </div>
