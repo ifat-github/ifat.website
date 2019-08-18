@@ -29961,11 +29961,15 @@ var Header = function Header(_ref) {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/projects"
-  }, "Projects")), _react.default.createElement("h3", {
+  }, "Projects")), _react.default.createElement("h4", {
     style: style
   }, _react.default.createElement(_reactRouterDom.Link, {
     to: "/jokes"
-  }, "Geeky Jokes"))), children);
+  }, "Geeky Jokes")), _react.default.createElement("h4", {
+    style: style
+  }, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/music-master"
+  }, "Music Master"))), children);
 };
 
 var _default = Header;
@@ -30544,7 +30548,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33185" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43549" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
