@@ -30075,7 +30075,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Artist = function Artist(_ref) {
   var artist = _ref.artist;
-  if (!artist) return null;
+
+  if (!artist) {
+    return _react.default.createElement("div", null, _react.default.createElement("h3", null, "Couldn't find this artist, please try again."));
+  }
+
   var images = artist.images,
       name = artist.name,
       followers = artist.followers,
@@ -30202,6 +30206,11 @@ function (_Component) {
       var _this2 = this;
 
       var tracks = this.props.tracks;
+
+      if (!tracks) {
+        return _react.default.createElement("div", null);
+      }
+
       return _react.default.createElement("div", null, tracks.map(function (track) {
         var id = track.id,
             name = track.name,
@@ -30313,6 +30322,14 @@ function (_Component) {
             });
           }).catch(function (error) {
             return alert(error.message);
+          });
+        } else {
+          _this.setState({
+            artist: null
+          });
+
+          _this.setState({
+            tracks: null
           });
         }
       }).catch(function (error) {
@@ -30527,7 +30544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40895" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33185" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

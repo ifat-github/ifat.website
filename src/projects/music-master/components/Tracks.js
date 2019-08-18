@@ -39,6 +39,11 @@ class Tracks extends Component {
     render() {
         const { tracks } = this.props;
 
+        if (!tracks) {
+            return (
+                <div></div>
+            );
+        }
         return (
             <div>
                 {

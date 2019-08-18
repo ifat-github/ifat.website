@@ -1,7 +1,13 @@
 import React from 'react';
 
 const Artist = ({ artist }) => {
-    if (!artist) return null;
+    if (!artist) {
+        return (
+            <div>
+                <h3>Couldn't find this artist, please try again.</h3>
+            </div>
+        );
+    } 
     
     const { images, name, followers, genres } = artist;
     return (
