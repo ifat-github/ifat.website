@@ -33,6 +33,11 @@ const Projects = () => (
                 )
             }
         </div>
+    <Router history={createBrowserHistory()}>
+        <Switch>
+            <Route path='/music-master' render={() => <Header><MusicMaster /></Header>} />
+        </Switch>
+    </Router>
     </div>
 )
 
