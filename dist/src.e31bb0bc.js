@@ -29464,12 +29464,15 @@ var PROJECTS = [{
   description: 'A java http servlet I built, involving JSP, javascript and core web dev concepts!',
   link: 'https://github.com/ifat-github/Company-and-Products-Registration-and-sign-in',
   image: _project.default
-}, {
-  id: 2,
-  title: 'Music Master',
-  description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
-  link: '/music-master',
-  image: _spotify.default
+  /*,
+  {
+     id: 2,
+     title: 'Music Master',
+     description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
+     link: '/music-master',
+     image: spotify
+  }*/
+
 }];
 var _default = PROJECTS;
 exports.default = _default;
@@ -30488,7 +30491,7 @@ require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var routing = _react.default.createElement(_reactRouterDom.BrowserRouter, {
+var routing = _react.default.createElement(_reactRouterDom.Router, {
   history: (0, _createBrowserHistory.default)()
 }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
   exact: true,
@@ -30551,7 +30554,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36845" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40151" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
