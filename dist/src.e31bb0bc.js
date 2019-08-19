@@ -29468,7 +29468,7 @@ var PROJECTS = [{
   id: 2,
   title: 'Music Master',
   description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
-  link: 'https://ifat.website/music-master',
+  link: '/music-master',
   image: _spotify.default
 }];
 var _default = PROJECTS;
@@ -30487,7 +30487,7 @@ require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement(_reactRouterDom.Router, {
+_reactDom.default.render(_react.default.createElement(_reactRouterDom.BrowserRouter, {
   history: (0, _createBrowserHistory.default)()
 }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
   exact: true,
@@ -30548,7 +30548,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39391" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44793" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
