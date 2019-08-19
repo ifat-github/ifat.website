@@ -29955,19 +29955,20 @@ var Header = function Header(_ref) {
   };
   return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
     style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
+  }, _react.default.createElement(_reactRouterDom.NavLink, {
+    exact: true,
     to: "/"
   }, "Home")), _react.default.createElement("h3", {
     style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
+  }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/projects"
   }, "Projects")), _react.default.createElement("h4", {
     style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
+  }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/music-master"
   }, "Music Master")), _react.default.createElement("h4", {
     style: style
-  }, _react.default.createElement(_reactRouterDom.Link, {
+  }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/jokes"
   }, "Geeky Jokes"))), children);
 };
@@ -30487,7 +30488,7 @@ require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement(_reactRouterDom.BrowserRouter, {
+var routing = _react.default.createElement(_reactRouterDom.BrowserRouter, {
   history: (0, _createBrowserHistory.default)()
 }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
   exact: true,
@@ -30510,7 +30511,9 @@ _reactDom.default.render(_react.default.createElement(_reactRouterDom.BrowserRou
   render: function render() {
     return _react.default.createElement(_Header.default, null, _react.default.createElement(_musicMaster.default, null));
   }
-}))), document.getElementById('root'));
+})));
+
+_reactDom.default.render(routing, document.getElementById('root'));
 /* new Promise(resolve => {
     setTimeout(() => {
         console.log('bears');
@@ -30548,7 +30551,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44793" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36845" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
