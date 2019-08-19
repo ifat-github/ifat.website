@@ -26,6 +26,8 @@ class Jokes extends Component {
     render() {
         return (
             <div>
+                <p>A React JS app I wrote that hits the an API to get stupid jokes.</p>
+                <hr />
                 <h2>Highlighted Joke</h2>
                 <Joke joke={this.state.joke}/>
                 <hr />

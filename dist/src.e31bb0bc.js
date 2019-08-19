@@ -29464,15 +29464,6 @@ var PROJECTS = [{
   description: 'A java http servlet I built, involving JSP, javascript and core web dev concepts!',
   link: 'https://github.com/ifat-github/Company-and-Products-Registration-and-sign-in',
   image: _project.default
-  /*,
-  {
-     id: 2,
-     title: 'Music Master',
-     description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
-     link: '/music-master',
-     image: spotify
-  }*/
-
 }];
 var _default = PROJECTS;
 exports.default = _default;
@@ -29914,7 +29905,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
+      return _react.default.createElement("div", null, _react.default.createElement("p", null, "A React JS app I wrote that hits the an API to get stupid jokes."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
         joke: this.state.joke
       }), _react.default.createElement("hr", null), _react.default.createElement("h3", null, "Want 10 new jokes?"), _react.default.createElement("button", {
         onClick: this.fetchJokes
@@ -29965,7 +29956,7 @@ var Header = function Header(_ref) {
     style: style
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/projects"
-  }, "Projects")), _react.default.createElement("h4", {
+  }, "Projects on Git")), _react.default.createElement("h4", {
     style: style
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/music-master"
@@ -30356,7 +30347,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Music Master"), _react.default.createElement(_Search.default, {
+      return _react.default.createElement("div", null, _react.default.createElement("p", null, "A React JS app I wrote that hits the Spotify API to get a playable list of the top tracks of any artist."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Music Master"), _react.default.createElement(_Search.default, {
         searchArtist: this.searchArtist
       }), _react.default.createElement(_Artist.default, {
         artist: this.state.artist
@@ -30554,7 +30545,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40151" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42091" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

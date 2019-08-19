@@ -12,7 +12,7 @@ const Header = ({ children }) => {
         <div>
             <div>
                 <h3 style={style}><NavLink exact to='/'>Home</NavLink></h3>
-                <h3 style={style}><NavLink to='/projects'>Projects</NavLink></h3>
+                <h3 style={style}><NavLink to='/projects'>Projects on Git</NavLink></h3>
                 <h4 style={style}><NavLink to='/music-master'>Music Master</NavLink></h4>
                 <h4 style={style}><NavLink to='/jokes'>Geeky Jokes</NavLink></h4>
             </div>
