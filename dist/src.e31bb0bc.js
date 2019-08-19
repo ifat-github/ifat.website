@@ -29468,7 +29468,7 @@ var PROJECTS = [{
   id: 2,
   title: 'Music Master',
   description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
-  link: './music-master',
+  link: 'https://ifat.website/music-master',
   image: _spotify.default
 }];
 var _default = PROJECTS;
@@ -30548,7 +30548,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45489" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39391" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

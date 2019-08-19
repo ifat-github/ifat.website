@@ -13,7 +13,7 @@ const PROJECTS = [
         id: 2,
         title: 'Music Master',
         description: 'An application that hits the Spotify API to get a playable list of the top tracks of any artist. ',
-        link: './music-master',
+        link: 'https://ifat.website/music-master',
         image: spotify
     }
 ];
