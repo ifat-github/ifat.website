@@ -29604,8 +29604,8 @@ var _default = SocialProfiles;
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","../data/socialProfiles":"data/socialProfiles.js"}],"assets/profile.jpeg":[function(require,module,exports) {
 module.exports = "/profile.157bb0a7.jpeg";
-},{}],"assets/down.png":[function(require,module,exports) {
-module.exports = "/down.0587e768.png";
+},{}],"assets/bigIcon.png":[function(require,module,exports) {
+module.exports = "/bigIcon.8816b244.png";
 },{}],"components/Title.js":[function(require,module,exports) {
 "use strict";
 
@@ -29714,7 +29714,7 @@ var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
 
 var _profile = _interopRequireDefault(require("../assets/profile.jpeg"));
 
-var _down = _interopRequireDefault(require("../assets/down.png"));
+var _bigIcon = _interopRequireDefault(require("../assets/bigIcon.png"));
 
 var _Title = _interopRequireDefault(require("./Title.js"));
 
@@ -29777,17 +29777,13 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
-        style: {
-          height: 220
-        }
-      }), _react.default.createElement("img", {
-        src: _down.default,
-        className: "down"
-      }), _react.default.createElement("div", {
-        style: {
-          height: 220
-        }
-      }), _react.default.createElement("hr", null), _react.default.createElement("img", {
+        className: "section\u2014first bg"
+      }, _react.default.createElement("img", {
+        src: _bigIcon.default,
+        className: "big-icon"
+      })), _react.default.createElement("div", {
+        className: "section"
+      }, _react.default.createElement("img", {
         src: _profile.default,
         alt: "profile",
         className: "profile"
@@ -29795,7 +29791,7 @@ function (_Component) {
         onClick: this.toggleDisplayBio
       }, "Show Less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
-      }, "Read More")), _react.default.createElement("hr", null), _react.default.createElement(_SocialProfiles.default, null));
+      }, "Read More")), _react.default.createElement(_SocialProfiles.default, null)));
     }
   }]);
 
@@ -29804,7 +29800,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/down.png":"assets/down.png","./Title.js":"components/Title.js"}],"components/Jokes.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/bigIcon.png":"assets/bigIcon.png","./Title.js":"components/Title.js"}],"components/Jokes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29942,29 +29938,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Header = function Header(_ref) {
   var children = _ref.children;
-  var style = {
-    display: 'inline-block',
-    margin: 10,
-    marginBottom: 30
-  };
-  return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("h3", {
-    style: style
+  return _react.default.createElement("div", null, _react.default.createElement("div", {
+    className: "header"
+  }, _react.default.createElement("h3", {
+    className: "headerH3"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     exact: true,
     to: "/"
   }, "Home")), _react.default.createElement("h3", {
-    style: style
+    className: "headerH3"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/projects"
   }, "Projects on Git")), _react.default.createElement("h4", {
-    style: style
+    className: "headerH3"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/music-master"
   }, "Music Master")), _react.default.createElement("h4", {
-    style: style
+    className: "headerH3"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/jokes"
-  }, "Geeky Jokes"))), children);
+  }, "Geeky Jokes"))), _react.default.createElement("div", {
+    className: "header-children"
+  }, children));
 };
 
 var _default = Header;
@@ -30545,7 +30540,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44433" + '/');
+=======
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "37019" + '/');
+>>>>>>> 141731b9091d559004e1af58c7a4fafb274f0381
 
   ws.onmessage = function (event) {
     checkedAssets = {};
