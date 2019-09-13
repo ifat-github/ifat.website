@@ -29901,7 +29901,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("p", null, "A React JS app I wrote that hits the an API to get stupid jokes."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
+      return _react.default.createElement("div", null, _react.default.createElement("p", null, "A React JS app I wrote that hits an API to get stupid jokes."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement(Joke, {
         joke: this.state.joke
       }), _react.default.createElement("hr", null), _react.default.createElement("h3", null, "Want 10 new jokes?"), _react.default.createElement("button", {
         onClick: this.fetchJokes
@@ -30500,6 +30500,8 @@ var routing = _react.default.createElement(_reactRouterDom.Router, {
   render: function render() {
     return _react.default.createElement(_Header.default, null, _react.default.createElement(_musicMaster.default, null));
   }
+}), _react.default.createElement(_reactRouterDom.Route, {
+  component: _App.default
 })));
 
 _reactDom.default.render(routing, document.getElementById('root'));
@@ -30540,11 +30542,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44433" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37019" + '/');
->>>>>>> 141731b9091d559004e1af58c7a4fafb274f0381
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38439" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

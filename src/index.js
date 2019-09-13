@@ -16,6 +16,7 @@ const routing = (
             <Route path='/projects' render={() => <Header><Projects /></Header>} />
             <Route path='/jokes' render={() => <Header><Jokes /></Header>} />
             <Route path='/music-master' render={() => <Header><MusicMaster /></Header>} />
+            <Route component={App} />
         </Switch>
     </Router>
 );
