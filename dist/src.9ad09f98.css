@@ -262,10 +262,15 @@ h1, h2, h3, h4, h5 {
 
 .project a h3 {
     color: #b35900;
+    padding-bottom: 10px;
 }
 
 .project a:hover {
     text-decoration: none;
+}
+
+.project a img {
+    padding-bottom: 10px;
 }
 
 
