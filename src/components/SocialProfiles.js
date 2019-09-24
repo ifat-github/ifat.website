@@ -15,15 +15,12 @@ const SocialProfile = (props) => {
 
 const SocialProfiles = () => (
     <div>
-        <h2>Connect with me!</h2>
-        <div>
-            {
-                SOCIAL_PROFILES.map(SOCIAL => (
-                        <SocialProfile key={SOCIAL.id} social={SOCIAL} />
-                    )
+        {
+            SOCIAL_PROFILES.map(SOCIAL => (
+                    <SocialProfile key={SOCIAL.id} social={SOCIAL} />
                 )
-            }
-        </div>
+            )
+        }
     </div>
 )
 

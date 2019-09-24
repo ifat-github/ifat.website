@@ -12,7 +12,7 @@ const Project = (props) => {
 
     return (
         //the project data will be located in the project props 
-        <div style={{ display: 'inline-block', width: 300, margin: 10 }}>
+        <div className='project'>
             <a href={link}>
                 <h3>{title}</h3>
                 <img src={image} alt='profile' style={{ height: 120 }}/>
@@ -24,15 +24,12 @@ const Project = (props) => {
 
 const Projects = () => (
     <div>
-        <h2>Highlighted Projects</h2>
-        <div>
-            {
-                PROJECTS.map(PROJECT => (
-                        <Project key={PROJECT.id} project={PROJECT} />
-                    )
+        {
+            PROJECTS.map(PROJECT => (
+                    <Project key={PROJECT.id} project={PROJECT} />
                 )
-            }
-        </div>
+            )
+        }
     </div>
 )
 

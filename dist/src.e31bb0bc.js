@@ -29461,8 +29461,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var PROJECTS = [{
   id: 1,
   title: 'Company and products registration system',
-  description: 'A java http servlet I built, involving JSP, javascript and core web dev concepts!',
+  description: "Java HTTP Servlet I've built, involving JSP, javascript and core web dev concepts!",
   link: 'https://github.com/ifat-github/Company-and-Products-Registration-and-sign-in',
+  image: _project.default
+}, {
+  id: 2,
+  title: 'Music Master',
+  description: "React JS app I've wrote that hits the Spotify API to get a playable list of the top tracks of any artist.",
+  link: 'https://github.com/ifat-github/music-master',
+  image: _spotify.default
+}, {
+  id: 3,
+  title: 'Geeky Jokes',
+  description: "React JS app I've wrote that hits an API to get stupid jokes..",
+  link: '',
+  image: _project.default
+}, {
+  id: 4,
+  title: 'Vending Machine',
+  description: 'Java implementation of a Final State Machine using the example of a vending machine.',
+  link: 'https://github.com/ifat-github/vending-machine',
   image: _project.default
 }];
 var _default = PROJECTS;
@@ -29495,11 +29513,7 @@ var Project = function Project(props) {
       link = _props$project.link;
   return (//the project data will be located in the project props 
     _react.default.createElement("div", {
-      style: {
-        display: 'inline-block',
-        width: 300,
-        margin: 10
-      }
+      className: "project"
     }, _react.default.createElement("a", {
       href: link
     }, _react.default.createElement("h3", null, title), _react.default.createElement("img", {
@@ -29513,12 +29527,12 @@ var Project = function Project(props) {
 };
 
 var Projects = function Projects() {
-  return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Projects"), _react.default.createElement("div", null, _projects.default.map(function (PROJECT) {
+  return _react.default.createElement("div", null, _projects.default.map(function (PROJECT) {
     return _react.default.createElement(Project, {
       key: PROJECT.id,
       project: PROJECT
     });
-  })));
+  }));
 };
 
 var _default = Projects;
@@ -29592,12 +29606,12 @@ var SocialProfile = function SocialProfile(props) {
 };
 
 var SocialProfiles = function SocialProfiles() {
-  return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Connect with me!"), _react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL) {
+  return _react.default.createElement("div", null, _socialProfiles.default.map(function (SOCIAL) {
     return _react.default.createElement(SocialProfile, {
       key: SOCIAL.id,
       social: SOCIAL
     });
-  })));
+  }));
 };
 
 var _default = SocialProfiles;
@@ -29698,7 +29712,7 @@ function (_Component) {
 
 var _default = Title;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/About.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29742,23 +29756,23 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var App =
+var About =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(App, _Component);
+  _inherits(About, _Component);
 
-  function App() {
+  function About() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, About);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(About)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       displayBio: false
@@ -29773,32 +29787,65 @@ function (_Component) {
     return _this;
   }
 
-  _createClass(App, [{
+  _createClass(About, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
-        className: "section\u2014first bg"
-      }, _react.default.createElement("img", {
-        src: _bigIcon.default,
-        className: "big-icon"
-      })), _react.default.createElement("div", {
         className: "section"
       }, _react.default.createElement("img", {
         src: _profile.default,
         alt: "profile",
         className: "profile"
       }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement("p", null, "My name is Ifat."), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I live in Petah-Tiqwa, and code every day."), _react.default.createElement("p", null, "My favorite language is JavaScript, and I think React.js is awesome."), _react.default.createElement("button", {
+        className: "btn btn-tour",
         onClick: this.toggleDisplayBio
-      }, "Show Less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
+      }, "Show Less ", _react.default.createElement("i", {
+        className: "fa fa-angle-up"
+      }))) : _react.default.createElement("div", null, _react.default.createElement("button", {
+        className: "btn btn-tour",
         onClick: this.toggleDisplayBio
-      }, "Read More")), _react.default.createElement(_SocialProfiles.default, null)));
+      }, "Read More ", _react.default.createElement("i", {
+        className: "fa fa-angle-down"
+      })))));
     }
   }]);
 
-  return App;
+  return About;
 }(_react.Component);
 
-var _default = App;
+var _default = About;
+/*
+render() {
+        return (
+            <div>
+                <div className='section—first bg'>
+                    <img src={bigIcon} className='big-icon'/>
+                </div>
+                <div className='section'>
+                    <img src={profile} alt='profile' className='profile' />
+                    <h1>Hello!</h1>
+                    <p>My name is Ifat.</p>
+                    <Title /> 
+                    <p>I'm always looking forward to working on meaningful projects.</p>
+                    {
+                        this.state.displayBio ? (
+                            <div>
+                                <p>I live in Petah-Tiqwa, and code every day.</p>
+                                <p>My favorite language is JavaScript, and I think React.js is awesome.</p>
+                                <button onClick={this.toggleDisplayBio}>Show Less</button>
+                            </div>
+                        ) : (
+                        <div>
+                            <button onClick={this.toggleDisplayBio}>Read More</button>
+                        </div> 
+                        )
+                    }
+                    <SocialProfiles />
+                </div>
+            </div>
+        )
+*/
+
 exports.default = _default;
 },{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/bigIcon.png":"assets/bigIcon.png","./Title.js":"components/Title.js"}],"components/Jokes.js":[function(require,module,exports) {
 "use strict";
@@ -29922,7 +29969,210 @@ function (_Component) {
 
 var _default = Jokes;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Header.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"components/CV.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Projects = _interopRequireDefault(require("./Projects"));
+
+var _SocialProfiles = _interopRequireDefault(require("./SocialProfiles"));
+
+var _profile = _interopRequireDefault(require("../assets/profile.jpeg"));
+
+var _bigIcon = _interopRequireDefault(require("../assets/bigIcon.png"));
+
+var _Title = _interopRequireDefault(require("./Title.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var CV =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CV, _Component);
+
+  function CV() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, CV);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CV)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      displayCV: false
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "toggleDisplayCV", function () {
+      _this.setState({
+        displayCV: !_this.state.displayCV
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(CV, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
+        className: "section"
+      }, this.state.displayCV ? _react.default.createElement("div", null, _react.default.createElement("div", {
+        class: "cv"
+      }, _react.default.createElement("div", {
+        class: "container"
+      }, _react.default.createElement("div", {
+        class: "col-md-12"
+      }, _react.default.createElement("div", {
+        id: "cv",
+        class: "instaFade"
+      }, _react.default.createElement("div", {
+        class: "mainDetails"
+      }, _react.default.createElement("div", {
+        id: "headshot",
+        class: "quickFade"
+      }, _react.default.createElement("img", {
+        src: _profile.default,
+        alt: "Ifat Ori"
+      })), _react.default.createElement("div", {
+        id: "name"
+      }, _react.default.createElement("h1", {
+        class: "quickFade delayTwo"
+      }, "Ifat Ori"), _react.default.createElement("h2", {
+        class: "quickFade delayThree"
+      }, "Software Developer")), _react.default.createElement("div", {
+        id: "contactDetails",
+        class: "quickFade delayFour"
+      }, _react.default.createElement("ul", null, _react.default.createElement("li", null, "e: ", _react.default.createElement("a", {
+        href: "mailto:ifat.email@gmail.com",
+        target: "_blank"
+      }, "ifat.email@gmail.com")), _react.default.createElement("li", null, "w: ", _react.default.createElement("a", {
+        href: "http://ifat.website"
+      }, "ifat.website")), _react.default.createElement("li", null, "m: 054-5968534"))), _react.default.createElement("div", {
+        class: "clear"
+      })), _react.default.createElement("div", {
+        id: "mainArea",
+        class: "quickFade delayFive"
+      }, _react.default.createElement("section", null, _react.default.createElement("div", {
+        class: "sectionTitle"
+      }, _react.default.createElement("h1", null, "Education")), _react.default.createElement("div", {
+        class: "sectionContent"
+      }, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Java Developer at Infinity Labs R&D (Matrix)"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "2019"), _react.default.createElement("p", null, "Participated In a 6-months intense full-time & open lab training environment that covered a full range of development tools, technologies, and techniques. Have gained a total of over 1,200 coding hours. Programmed with a focus on C & Java: solved implementation challenges using wide concepts such as Data Structures, Design Patterns, OOP, Generic Programming, multi-threaded environments. Deep understanding of Linux OS and its tools (e.g Bash). Familiarity with Server-side tools: MySQL, Apache Tomcat, JUnit & Networking concepts (e.g REST).")), _react.default.createElement("article", null, _react.default.createElement("h2", null, "Shenkar College"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "2012-2016 "), _react.default.createElement("p", null, "B.sc degree in Industrial Engineering, focus on Information Systems,"))), _react.default.createElement("div", {
+        class: "clear"
+      })), _react.default.createElement("section", null, _react.default.createElement("div", {
+        class: "sectionTitle"
+      }, _react.default.createElement("h1", null, "Key Skills")), _react.default.createElement("div", {
+        class: "sectionContent"
+      }, _react.default.createElement("ul", {
+        class: "keySkills"
+      }, _react.default.createElement("li", null, "Java"), _react.default.createElement("li", null, "C"), _react.default.createElement("li", null, "Linux"), _react.default.createElement("li", null, "HTML"), _react.default.createElement("li", null, "JavaScript"), _react.default.createElement("li", null, "React.js"), _react.default.createElement("li", null, "CSS"), _react.default.createElement("li", null, "Bootstrap"), _react.default.createElement("li", null, "MySQL"))), _react.default.createElement("div", {
+        class: "clear"
+      })), _react.default.createElement("section", null, _react.default.createElement("div", {
+        class: "sectionTitle"
+      }, _react.default.createElement("h1", null, "Work Experience")), _react.default.createElement("div", {
+        class: "sectionContent"
+      }, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Marketing Automation Specialist at eToro"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "July 2016 - August 2018"), _react.default.createElement("p", null, "Created emails with HTML, CSS Managed and modified an automated PHP system Found solutions for optimizing and improving internal processes Improved click, open, and conversion rates by tracking, analyzing, and AB testing campaigns. Conceptualized, built, and launched email campaigns Defined segmentation and personalization for each campaign. ")), _react.default.createElement("article", null, _react.default.createElement("h2", null, "Referent in \"Kalanet\" Project at NTA (The Israeli Light Rail)"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "2015 - 2016"))), _react.default.createElement("div", {
+        class: "clear"
+      })), _react.default.createElement("section", null, _react.default.createElement("div", {
+        class: "sectionTitle"
+      }, _react.default.createElement("h1", null, "Languages")), _react.default.createElement("div", {
+        class: "sectionContent"
+      }, _react.default.createElement("ul", {
+        class: "keySkills"
+      }, _react.default.createElement("li", null, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Hebrew"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "Mother Tongue"))), _react.default.createElement("li", null, _react.default.createElement("article", null, _react.default.createElement("h2", null, "English"), _react.default.createElement("p", {
+        class: "subDetails"
+      }, "Excellent level"))))), _react.default.createElement("div", {
+        class: "clear"
+      }))))))), _react.default.createElement("button", {
+        className: "btn btn-default submit-btn download-cv-form-button",
+        onClick: this.toggleDisplayCV
+      }, "Hide CV")) : _react.default.createElement("div", null, _react.default.createElement("button", {
+        className: "btn btn-default submit-btn download-cv-form-button",
+        onClick: this.toggleDisplayCV
+      }, "Show CV "))));
+    }
+  }]);
+
+  return CV;
+}(_react.Component);
+
+var _default = CV;
+/*
+render() {
+        return (
+            <div>
+                <div className='section—first bg'>
+                    <img src={bigIcon} className='big-icon'/>
+                </div>
+                <div className='section'>
+                    <img src={profile} alt='profile' className='profile' />
+                    <h1>Hello!</h1>
+                    <p>My name is Ifat.</p>
+                    <Title />
+                    <p>I'm always looking forward to working on meaningful projects.</p>
+                    {
+                        this.state.displayBio ? (
+                            <div>
+                                <p>I live in Petah-Tiqwa, and code every day.</p>
+                                <p>My favorite language is JavaScript, and I think React.js is awesome.</p>
+                                <button onClick={this.toggleDisplayBio}>Show Less</button>
+                            </div>
+                        ) : (
+                        <div>
+                            <button onClick={this.toggleDisplayBio}>Read More</button>
+                        </div>
+                        )
+                    }
+                    <SocialProfiles />
+                </div>
+            </div>
+        )
+*/
+
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./Projects":"components/Projects.js","./SocialProfiles":"components/SocialProfiles.js","../assets/profile.jpeg":"assets/profile.jpeg","../assets/bigIcon.png":"assets/bigIcon.png","./Title.js":"components/Title.js"}],"components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29941,20 +30191,20 @@ var Header = function Header(_ref) {
   return _react.default.createElement("div", null, _react.default.createElement("div", {
     className: "header"
   }, _react.default.createElement("h3", {
-    className: "headerH3"
+    className: "headerH"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     exact: true,
     to: "/"
   }, "Home")), _react.default.createElement("h3", {
-    className: "headerH3"
+    className: "headerH"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/projects"
   }, "Projects on Git")), _react.default.createElement("h4", {
-    className: "headerH3"
+    className: "headerH"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/music-master"
   }, "Music Master")), _react.default.createElement("h4", {
-    className: "headerH3"
+    className: "headerH"
   }, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/jokes"
   }, "Geeky Jokes"))), _react.default.createElement("div", {
@@ -30342,7 +30592,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("p", null, "A React JS app I wrote that hits the Spotify API to get a playable list of the top tracks of any artist."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Music Master"), _react.default.createElement(_Search.default, {
+      return _react.default.createElement("div", {
+        className: "mm"
+      }, _react.default.createElement("p", null, "A React JS app I wrote that hits the Spotify API to get a playable list of the top tracks of any artist."), _react.default.createElement("hr", null), _react.default.createElement("h2", null, "Music Master"), _react.default.createElement(_Search.default, {
         searchArtist: this.searchArtist
       }), _react.default.createElement(_Artist.default, {
         artist: this.state.artist
@@ -30357,79 +30609,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Search":"projects/music-master/components/Search.js","./Artist":"projects/music-master/components/Artist.js","./Tracks":"projects/music-master/components/Tracks.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"projects/music-master/index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./assets/roboto-condensed.light.ttf":[["roboto-condensed.light.dc1ca484.ttf","projects/music-master/assets/roboto-condensed.light.ttf"],"projects/music-master/assets/roboto-condensed.light.ttf"],"./assets/economica-bold.ttf":[["economica-bold.4b753017.ttf","projects/music-master/assets/economica-bold.ttf"],"projects/music-master/assets/economica-bold.ttf"],"./assets/BreeSerif-Regular.ttf":[["BreeSerif-Regular.c4eb590d.ttf","projects/music-master/assets/BreeSerif-Regular.ttf"],"projects/music-master/assets/BreeSerif-Regular.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"projects/music-master/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Search":"projects/music-master/components/Search.js","./Artist":"projects/music-master/components/Artist.js","./Tracks":"projects/music-master/components/Tracks.js"}],"projects/music-master/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30441,18 +30621,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _App = _interopRequireDefault(require("./components/App"));
 
-require("./index.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = _App.default;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./components/App":"projects/music-master/components/App.js","./index.css":"projects/music-master/index.css"}],"index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./assets/roboto-condensed.light.ttf":[["roboto-condensed.light.6709adf4.ttf","assets/roboto-condensed.light.ttf"],"assets/roboto-condensed.light.ttf"],"./assets/economica-bold.ttf":[["economica-bold.12a9e27d.ttf","assets/economica-bold.ttf"],"assets/economica-bold.ttf"],"./assets/BreeSerif-Regular.ttf":[["BreeSerif-Regular.8303670d.ttf","assets/BreeSerif-Regular.ttf"],"assets/BreeSerif-Regular.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./components/App":"projects/music-master/components/App.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30463,9 +30636,13 @@ var _reactRouterDom = require("react-router-dom");
 
 var _createBrowserHistory = _interopRequireDefault(require("history/createBrowserHistory"));
 
-var _App = _interopRequireDefault(require("./components/App"));
+var _About = _interopRequireDefault(require("./components/About"));
+
+var _Title = _interopRequireDefault(require("./components/Title"));
 
 var _Jokes = _interopRequireDefault(require("./components/Jokes"));
+
+var _CV = _interopRequireDefault(require("./components/CV"));
 
 var _Projects = _interopRequireDefault(require("./components/Projects"));
 
@@ -30473,38 +30650,27 @@ var _Header = _interopRequireDefault(require("./components/Header"));
 
 var _musicMaster = _interopRequireDefault(require("./projects/music-master"));
 
-require("./index.css");
+var _SocialProfiles = _interopRequireDefault(require("./components/SocialProfiles"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var routing = _react.default.createElement(_reactRouterDom.Router, {
-  history: (0, _createBrowserHistory.default)()
-}, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
-  exact: true,
-  path: "/",
-  render: function render() {
-    return _react.default.createElement(_Header.default, null, _react.default.createElement(_App.default, null));
-  }
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/projects",
-  render: function render() {
-    return _react.default.createElement(_Header.default, null, _react.default.createElement(_Projects.default, null));
-  }
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/jokes",
-  render: function render() {
-    return _react.default.createElement(_Header.default, null, _react.default.createElement(_Jokes.default, null));
-  }
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/music-master",
-  render: function render() {
-    return _react.default.createElement(_Header.default, null, _react.default.createElement(_musicMaster.default, null));
-  }
-}), _react.default.createElement(_reactRouterDom.Route, {
-  component: _App.default
-})));
+/* const routing = (
+    <Router history={createBrowserHistory()}>
+        <Switch>
+            <Route exact path='/' render={() => <Header><App /></Header>} />
+            <Route path='/projects' render={() => <Header><Projects /></Header>} />
+            <Route path='/jokes' render={() => <Header><Jokes /></Header>} />
+            <Route path='/music-master' render={() => <Header><MusicMaster /></Header>} /> 
+        </Switch>
+    </Router>
+); */
+_reactDom.default.render(_react.default.createElement(_Title.default, null), document.getElementById('title'));
 
-_reactDom.default.render(routing, document.getElementById('root'));
+_reactDom.default.render(_react.default.createElement(_Projects.default, null), document.getElementById('projects'));
+
+_reactDom.default.render(_react.default.createElement(_SocialProfiles.default, null), document.getElementById('social'));
+
+_reactDom.default.render(_react.default.createElement(_CV.default, null), document.getElementById('cv-toggle'));
 /* new Promise(resolve => {
     setTimeout(() => {
         console.log('bears');
@@ -30514,7 +30680,7 @@ _reactDom.default.render(routing, document.getElementById('root'));
     console.log('beets');
     console.log('battlestar galactica');
 }); */
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/App":"components/App.js","./components/Jokes":"components/Jokes.js","./components/Projects":"components/Projects.js","./components/Header":"components/Header.js","./projects/music-master":"projects/music-master/index.js","./index.css":"index.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/es/index.js","history/createBrowserHistory":"../node_modules/history/createBrowserHistory.js","./components/About":"components/About.js","./components/Title":"components/Title.js","./components/Jokes":"components/Jokes.js","./components/CV":"components/CV.js","./components/Projects":"components/Projects.js","./components/Header":"components/Header.js","./projects/music-master":"projects/music-master/index.js","./components/SocialProfiles":"components/SocialProfiles.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -30542,7 +30708,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37325" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43291" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

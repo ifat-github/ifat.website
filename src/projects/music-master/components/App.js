@@ -34,7 +34,7 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="mm">
                 <p>A React JS app I wrote that hits the Spotify API to get a playable list of the top tracks of any artist.</p>
                 <hr />
                 <h2>Music Master</h2>
