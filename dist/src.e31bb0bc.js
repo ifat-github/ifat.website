@@ -30050,81 +30050,81 @@ function (_Component) {
       return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "section"
       }, this.state.displayCV ? _react.default.createElement("div", null, _react.default.createElement("div", {
-        class: "cv"
+        className: "cv"
       }, _react.default.createElement("div", {
-        class: "container"
+        className: "container"
       }, _react.default.createElement("div", {
-        class: "col-md-12"
+        className: "col-md-12"
       }, _react.default.createElement("div", {
         id: "cv",
-        class: "instaFade"
+        className: "instaFade"
       }, _react.default.createElement("div", {
-        class: "mainDetails"
+        className: "mainDetails"
       }, _react.default.createElement("div", {
         id: "headshot",
-        class: "quickFade"
+        className: "quickFade"
       }, _react.default.createElement("img", {
         src: _profile.default,
         alt: "Ifat Ori"
       })), _react.default.createElement("div", {
         id: "name"
       }, _react.default.createElement("h1", {
-        class: "quickFade delayTwo"
+        className: "quickFade delayTwo"
       }, "Ifat Ori"), _react.default.createElement("h2", {
-        class: "quickFade delayThree"
+        className: "quickFade delayThree"
       }, "Software Developer")), _react.default.createElement("div", {
         id: "contactDetails",
-        class: "quickFade delayFour"
+        className: "quickFade delayFour"
       }, _react.default.createElement("ul", null, _react.default.createElement("li", null, "e: ", _react.default.createElement("a", {
         href: "mailto:ifat.email@gmail.com",
         target: "_blank"
       }, "ifat.email@gmail.com")), _react.default.createElement("li", null, "w: ", _react.default.createElement("a", {
         href: "http://ifat.website"
       }, "ifat.website")), _react.default.createElement("li", null, "m: 054-5968534"))), _react.default.createElement("div", {
-        class: "clear"
+        className: "clear"
       })), _react.default.createElement("div", {
         id: "mainArea",
-        class: "quickFade delayFive"
+        className: "quickFade delayFive"
       }, _react.default.createElement("section", null, _react.default.createElement("div", {
-        class: "sectionTitle"
+        className: "sectionTitle"
       }, _react.default.createElement("h1", null, "Education")), _react.default.createElement("div", {
-        class: "sectionContent"
+        className: "sectionContent"
       }, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Java Developer at Infinity Labs R&D (Matrix)"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "2019"), _react.default.createElement("p", null, "Participated In a 6-months intense full-time & open lab training environment that covered a full range of development tools, technologies, and techniques. Have gained a total of over 1,200 coding hours. Programmed with a focus on C & Java: solved implementation challenges using wide concepts such as Data Structures, Design Patterns, OOP, Generic Programming, multi-threaded environments. Deep understanding of Linux OS and its tools (e.g Bash). Familiarity with Server-side tools: MySQL, Apache Tomcat, JUnit & Networking concepts (e.g REST).")), _react.default.createElement("article", null, _react.default.createElement("h2", null, "Shenkar College"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "2012-2016 "), _react.default.createElement("p", null, "B.sc degree in Industrial Engineering, focus on Information Systems,"))), _react.default.createElement("div", {
-        class: "clear"
+        className: "clear"
       })), _react.default.createElement("section", null, _react.default.createElement("div", {
-        class: "sectionTitle"
+        className: "sectionTitle"
       }, _react.default.createElement("h1", null, "Key Skills")), _react.default.createElement("div", {
-        class: "sectionContent"
+        className: "sectionContent"
       }, _react.default.createElement("ul", {
-        class: "keySkills"
+        className: "keySkills"
       }, _react.default.createElement("li", null, "Java"), _react.default.createElement("li", null, "C"), _react.default.createElement("li", null, "Linux"), _react.default.createElement("li", null, "HTML"), _react.default.createElement("li", null, "JavaScript"), _react.default.createElement("li", null, "React.js"), _react.default.createElement("li", null, "CSS"), _react.default.createElement("li", null, "Bootstrap"), _react.default.createElement("li", null, "MySQL"))), _react.default.createElement("div", {
-        class: "clear"
+        className: "clear"
       })), _react.default.createElement("section", null, _react.default.createElement("div", {
-        class: "sectionTitle"
+        className: "sectionTitle"
       }, _react.default.createElement("h1", null, "Work Experience")), _react.default.createElement("div", {
-        class: "sectionContent"
+        className: "sectionContent"
       }, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Marketing Automation Specialist at eToro"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "July 2016 - August 2018"), _react.default.createElement("p", null, "Created emails with HTML, CSS Managed and modified an automated PHP system Found solutions for optimizing and improving internal processes Improved click, open, and conversion rates by tracking, analyzing, and AB testing campaigns. Conceptualized, built, and launched email campaigns Defined segmentation and personalization for each campaign. ")), _react.default.createElement("article", null, _react.default.createElement("h2", null, "Referent in \"Kalanet\" Project at NTA (The Israeli Light Rail)"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "2015 - 2016"))), _react.default.createElement("div", {
-        class: "clear"
+        className: "clear"
       })), _react.default.createElement("section", null, _react.default.createElement("div", {
-        class: "sectionTitle"
+        className: "sectionTitle"
       }, _react.default.createElement("h1", null, "Languages")), _react.default.createElement("div", {
-        class: "sectionContent"
+        className: "sectionContent"
       }, _react.default.createElement("ul", {
-        class: "keySkills"
+        className: "keySkills"
       }, _react.default.createElement("li", null, _react.default.createElement("article", null, _react.default.createElement("h2", null, "Hebrew"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "Mother Tongue"))), _react.default.createElement("li", null, _react.default.createElement("article", null, _react.default.createElement("h2", null, "English"), _react.default.createElement("p", {
-        class: "subDetails"
+        className: "subDetails"
       }, "Excellent level"))))), _react.default.createElement("div", {
-        class: "clear"
+        className: "clear"
       }))))))), _react.default.createElement("button", {
         className: "btn btn-default submit-btn download-cv-form-button",
         onClick: this.toggleDisplayCV
@@ -30708,7 +30708,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43291" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -16,6 +16,18 @@
     font-weight: 800;
 }
 
+@font-face {
+    font-family: Lato;
+    src: url(/Lato-Regular.f1cd7305.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Rokkitt;
+    src: url(/Rokkitt-Regular.f1208c5c.ttf);
+    font-weight: 800;
+}
+
 * {
     margin: 0;
     padding: 0;

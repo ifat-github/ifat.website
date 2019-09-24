@@ -79,7 +79,3 @@ $(document).ready(function () {
     'use strict';
     new WOW().init();
 });
-
-document.getElementById("toggle-button").onclick = function () {
-    document.getElementById("cv").style.display = "none";
-} 
