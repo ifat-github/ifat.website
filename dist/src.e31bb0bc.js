@@ -29482,7 +29482,7 @@ var PROJECTS = [{
   id: 3,
   title: 'Geeky Jokes',
   description: "React JS app I've wrote that hits an API to get stupid jokes..",
-  link: '',
+  link: 'https://hopeful-borg-d5ea3c.netlify.com/',
   image: _jokes.default
 }, {
   id: 4,
@@ -30716,7 +30716,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36907" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33553" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

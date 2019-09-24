@@ -22,7 +22,7 @@ const PROJECTS = [
         id: 3,
         title: 'Geeky Jokes',
         description: "React JS app I've wrote that hits an API to get stupid jokes..",
-        link: '',
+        link: 'https://hopeful-borg-d5ea3c.netlify.com/',
         image: jokes
     },
     {
