@@ -29468,7 +29468,7 @@ var PROJECTS = [{
   id: 2,
   title: 'Music Master',
   description: "React JS app I've wrote that hits the Spotify API to get a playable list of the top tracks of any artist.",
-  link: 'https://github.com/ifat-github/music-master',
+  link: 'https://vigorous-shannon-6eedba.netlify.com/',
   image: _spotify.default
 }, {
   id: 3,
@@ -30708,7 +30708,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38895" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36685" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

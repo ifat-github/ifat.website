@@ -13,7 +13,7 @@ const PROJECTS = [
         id: 2,
         title: 'Music Master',
         description: "React JS app I've wrote that hits the Spotify API to get a playable list of the top tracks of any artist.",
-        link: 'https://github.com/ifat-github/music-master',
+        link: 'https://vigorous-shannon-6eedba.netlify.com/',
         image: spotify
     },
     {
