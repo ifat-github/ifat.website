@@ -1,5 +1,7 @@
 import project1 from '../assets/project1.png';
 import spotify from '../assets/spotify.png';
+import vm from '../assets/vm.jpeg';
+import jokes from '../assets/jokes.jpeg';
 
 const PROJECTS = [
     {
@@ -21,14 +23,14 @@ const PROJECTS = [
         title: 'Geeky Jokes',
         description: "React JS app I've wrote that hits an API to get stupid jokes..",
         link: '',
-        image: project1
+        image: jokes
     },
     {
         id: 4,
         title: 'Vending Machine',
         description: 'Java implementation of a Final State Machine using the example of a vending machine.',
         link: 'https://github.com/ifat-github/vending-machine',
-        image: project1
+        image: vm
     }
 ];
 

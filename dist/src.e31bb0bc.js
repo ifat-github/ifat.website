@@ -29444,6 +29444,10 @@ exports.default = createBrowserHistory;
 module.exports = "/project1.0e13da1c.png";
 },{}],"assets/spotify.png":[function(require,module,exports) {
 module.exports = "/spotify.06d0132b.png";
+},{}],"assets/vm.jpeg":[function(require,module,exports) {
+module.exports = "/vm.49525de6.jpeg";
+},{}],"assets/jokes.jpeg":[function(require,module,exports) {
+module.exports = "/jokes.488e34d5.jpeg";
 },{}],"data/projects.js":[function(require,module,exports) {
 "use strict";
 
@@ -29455,6 +29459,10 @@ exports.default = void 0;
 var _project = _interopRequireDefault(require("../assets/project1.png"));
 
 var _spotify = _interopRequireDefault(require("../assets/spotify.png"));
+
+var _vm = _interopRequireDefault(require("../assets/vm.jpeg"));
+
+var _jokes = _interopRequireDefault(require("../assets/jokes.jpeg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29475,17 +29483,17 @@ var PROJECTS = [{
   title: 'Geeky Jokes',
   description: "React JS app I've wrote that hits an API to get stupid jokes..",
   link: '',
-  image: _project.default
+  image: _jokes.default
 }, {
   id: 4,
   title: 'Vending Machine',
   description: 'Java implementation of a Final State Machine using the example of a vending machine.',
   link: 'https://github.com/ifat-github/vending-machine',
-  image: _project.default
+  image: _vm.default
 }];
 var _default = PROJECTS;
 exports.default = _default;
-},{"../assets/project1.png":"assets/project1.png","../assets/spotify.png":"assets/spotify.png"}],"components/Projects.js":[function(require,module,exports) {
+},{"../assets/project1.png":"assets/project1.png","../assets/spotify.png":"assets/spotify.png","../assets/vm.jpeg":"assets/vm.jpeg","../assets/jokes.jpeg":"assets/jokes.jpeg"}],"components/Projects.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30708,7 +30716,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36685" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37521" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
