@@ -122,7 +122,7 @@
     </div>
     <div class="contact-me-form wow bounceIn">
       <div class="container">
-        <form role="form" id="contact" action="#" method="post" onsubmit="sendMail(); return false;" enctype="text/plain">
+        <form role="form" id="contact" action="sendMail();" method="post" onsubmit="sendMail(); return false;" enctype="text/plain">
           <div class="row">
             <div class="col-md-4">
               <input type="text" class="form-control" id="contact_name" placeholder="Name">
@@ -165,7 +165,9 @@
   var email = $('#contact #contact_email').val();
   var subject = $('#contact #subject').val();
   var message = $('#message').val();
-  window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message;
+  window.open('mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message);
+  /* window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message; */
+
   return false;
 }
 
