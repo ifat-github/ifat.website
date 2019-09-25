@@ -79,3 +79,8 @@ $(document).ready(function () {
     'use strict';
     new WOW().init();
 });
+
+/* collapse the menu when an item was selected */
+$('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
