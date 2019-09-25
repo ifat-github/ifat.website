@@ -169,7 +169,8 @@
       var email = $('#contact #contact_email').val();
       var subject = $('#contact #subject').val();
       var message = $('#message').val();
-      window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message;
+      window.open('mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message);
+      return false;
     };
   </script>
   <script src="index.js"></script>
