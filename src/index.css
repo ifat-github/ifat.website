@@ -145,6 +145,19 @@ h1, h2, h3, h4, h5 {
     height: 100vh;
 }
 
+@media only screen and (max-width: 600px) {
+    .header {
+        background-image: url(assets/bg3.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        height: 100vh;
+    }
+  }
+
 .logo-itself {
     vertical-align: middle;
     width: 350px;
@@ -676,16 +689,3 @@ p.subDetails {
     -moz-animation-delay: 0, 2.5s;
     animation-delay: 0, 2.5s;
 }
-
-@media only screen and (max-width: 600px) {
-    .header {
-        background-image: url(assets/bg3.jpg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        height: 100%;
-    }
-  }
