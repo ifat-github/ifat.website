@@ -30049,12 +30049,32 @@ function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "showCV", function () {
+      var elmnt = document.getElementById("cv-toggle");
+      var coordinate = elmnt.getBoundingClientRect().top + window.pageYOffset;
+      var offset = -50;
+      window.scrollTo({
+        top: coordinate + offset,
+        behavior: 'smooth'
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "hideCV", function () {
+      console.log("hide CV pressed");
+      var elmnt = document.getElementById("ABOUT");
+      elmnt.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
     return _this;
   }
 
   _createClass(CV, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "section"
       }, this.state.displayCV ? _react.default.createElement("div", null, _react.default.createElement("div", {
@@ -30134,11 +30154,19 @@ function (_Component) {
       }, "Excellent level"))))), _react.default.createElement("div", {
         className: "clear"
       }))))))), _react.default.createElement("button", {
-        className: "btn btn-default submit-btn download-cv-form-button",
-        onClick: this.toggleDisplayCV
+        className: "btn btn-default submit-btn reg-button",
+        onClick: function onClick(event) {
+          _this2.toggleDisplayCV();
+
+          _this2.hideCV();
+        }
       }, "Hide CV")) : _react.default.createElement("div", null, _react.default.createElement("button", {
-        className: "btn btn-default submit-btn download-cv-form-button",
-        onClick: this.toggleDisplayCV
+        className: "btn btn-default submit-btn reg-button",
+        onClick: function onClick(event) {
+          _this2.toggleDisplayCV();
+
+          _this2.showCV();
+        }
       }, "Show CV "))));
     }
   }]);
@@ -30716,7 +30744,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34377" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38773" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

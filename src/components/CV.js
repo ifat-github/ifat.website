@@ -23,6 +23,22 @@ class CV extends Component {
         this.setState({ displayCV: !this.state.displayCV });
     }
 
+    showCV = () => {
+        var elmnt = document.getElementById("cv-toggle");
+        const coordinate = elmnt.getBoundingClientRect().top + window.pageYOffset;
+        const offset = -50;
+
+        window.scrollTo({
+            top: coordinate + offset,
+            behavior: 'smooth'
+        });
+    }
+
+    hideCV = () => {
+        console.log("hide CV pressed");
+        var elmnt = document.getElementById("ABOUT");
+        elmnt.scrollIntoView({ behavior: "smooth" });
+    }
 
     render() {
         return (
@@ -160,11 +176,11 @@ class CV extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="btn btn-default submit-btn download-cv-form-button" onClick={this.toggleDisplayCV}>Hide CV</button>
+                                <button className="btn btn-default submit-btn reg-button" onClick={(event) => { this.toggleDisplayCV(); this.hideCV(); }}>Hide CV</button>
                             </div>
                         ) : (
                                 <div>
-                                    <button className="btn btn-default submit-btn download-cv-form-button" onClick={this.toggleDisplayCV}>Show CV </button>
+                                    <button className="btn btn-default submit-btn reg-button" onClick={(event) => { this.toggleDisplayCV(); this.showCV(); }}>Show CV </button>
                                 </div>
                             )
                     }

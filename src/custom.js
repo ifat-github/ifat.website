@@ -86,7 +86,6 @@ $('.navbar-nav>li>a').on('click', function () {
 });
 
 /* contact form on submit */
-
 function sendMail(e) {
     console.log('sending');
     var name = $('#contact #contact_name').val();
@@ -97,7 +96,6 @@ function sendMail(e) {
     /* window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message; */
     return false;
 };
-
 
 $('#contact').submit(function (e) {
     e.preventDefault();

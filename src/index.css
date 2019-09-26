@@ -74,6 +74,12 @@ h1, h2, h3, h4, h5 {
     margin-left: -30px;  
 }
 
+.reg-button,
+.reg-button:visited,
+.reg-button:focus {
+    width: auto !important;
+    margin: 5px;
+}
 /* ========= Navigation Bar ========= */
 .navbar-default {
     background-color: transparent;
@@ -247,10 +253,6 @@ h1, h2, h3, h4, h5 {
 /* ========= About Me ========= */
 .download-cv-form {
     padding-bottom: 30px;
-}
-
-.download-cv-form-button {
-    width: auto;
 }
 
 /* ========= Projects ========= */
