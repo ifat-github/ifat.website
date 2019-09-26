@@ -677,4 +677,17 @@ p.subDetails {
     animation-delay: 0, 2.5s;
 }
 
+@media only screen and (max-width: 600px) {
+    .header {
+        background-image: url(/bg3.9bd6c1bf.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        height: 100vh;
+    }
+  }
+
 /*# sourceMappingURL=/src.9ad09f98.css.map */
