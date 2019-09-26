@@ -84,3 +84,22 @@ $(document).ready(function () {
 $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
+
+/* contact form on submit */
+
+function sendMail(e) {
+    console.log('sending');
+    var name = $('#contact #contact_name').val();
+    var email = $('#contact #contact_email').val();
+    var subject = $('#contact #subject').val();
+    var message = $('#message').val();
+    window.open('mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message);
+    /* window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message; */
+    return false;
+};
+
+
+$('#contact').submit(function (e) {
+    e.preventDefault();
+    sendMail();
+}); 
