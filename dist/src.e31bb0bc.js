@@ -29601,7 +29601,8 @@ var SocialProfile = function SocialProfile(props) {
       icon = _props$social.icon,
       link = _props$social.link;
   return _react.default.createElement("span", null, _react.default.createElement("a", {
-    href: link
+    href: link,
+    target: "_blank"
   }, _react.default.createElement("img", {
     src: icon,
     alt: "social-profile",
@@ -30744,7 +30745,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46871" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34893" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -41,6 +41,7 @@ body, html {
     height: 100%;
     margin: 0 auto;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5 {
@@ -682,6 +683,5 @@ p.subDetails {
     -moz-animation-delay: 0, 2.5s;
     animation-delay: 0, 2.5s;
 }
-
 
 /*# sourceMappingURL=/src.9ad09f98.css.map */
