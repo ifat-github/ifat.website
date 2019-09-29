@@ -15,7 +15,7 @@ const Project = (props) => {
         <div className='project'>
             <a href={link}>
                 <h3>{title}</h3>
-                <img src={image} alt='profile' style={{ height: 120 }}/>
+                <img src={image} alt='profile' style={{ height: 120 }} />
             </a>
             <p>{description}</p>
         </div>
@@ -26,8 +26,8 @@ const Projects = () => (
     <div>
         {
             PROJECTS.map(PROJECT => (
-                    <Project key={PROJECT.id} project={PROJECT} />
-                )
+                <Project key={PROJECT.id} project={PROJECT} />
+            )
             )
         }
     </div>

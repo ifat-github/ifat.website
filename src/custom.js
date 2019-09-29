@@ -90,4 +90,20 @@ $('#contact').submit(function (e) {
     sendMail();
 });
 
+/* header padding */
+$(document).ready(function () {
+    'use strict';
 
+    setInterval(function () {
+        'use strict';
+
+        var windowHeight = $(window).height();
+        var headerHeight = $('#header-container').height();
+        var paddingHeight = windowHeight - headerHeight;
+
+        $('#header-container').css({
+            'padding-top': Math.round(paddingHeight / 2) + 'px',
+            'padding-bottom': Math.round(paddingHeight / 2) + 'px'
+        });
+    }, 10)
+});
