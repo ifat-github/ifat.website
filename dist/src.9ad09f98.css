@@ -146,11 +146,9 @@ h1, h2, h3, h4, h5 {
 
 .logo-itself {
     vertical-align: middle;
-    width: 350px;
+    width: 600px;
     max-height: 100%;
     max-width: 100%;
-    width: auto;
-    height: auto;
     top: 0;
     bottom: 0;
     left: 0;
