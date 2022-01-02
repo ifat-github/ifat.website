@@ -1,0 +1,59 @@
+@font-face {
+    font-family: RobotoCondensed;
+    src: url(/roboto-condensed.light.dc1ca484.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: EconomicaBold;
+    src: url(/economica-bold.4b753017.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: BreeSerif;
+    src: url(/BreeSerif-Regular.c4eb590d.ttf);
+    font-weight: 800;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: 'BreeSerif';
+}
+
+.track {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.track-image {
+    width: 250px;
+    height: 250px;
+}
+
+.track-text {
+    position: relative;
+    bottom: 0px;
+    width: 250px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.track-icon {
+    position: relative;
+    bottom: 200px;
+    left: 100px;
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

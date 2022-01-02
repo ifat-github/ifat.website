@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Ifat Ori</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" type="text/css" href="/animate.f747fe2f.css">
+  <link rel="stylesheet" type="text/css" href="/src.9ad09f98.css">
+
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="/icon.9c86b69e.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/font-awesome.min.b819e66a.css">
+
+
+  <script src="/animate.f747fe2f.js"></script>
+  <script src="/src.9ad09f98.js"></script>
+  <script src="/font-awesome.min.b819e66a.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="HOME">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ifat-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <!-- small size logo-->
+            <img src="/logo-full-small.a2e688ec.png" alt="logo">
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="ifat-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#HOME" class="nav-item">Home</a></li>
+            <li><a href="#ABOUT" class="nav-item">About Me</a></li>
+            <li><a href="#PROJECTS" class="nav-item">Projects</a></li>
+            <li><a href="#CONTACT" class="nav-item">Contact Me</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="header-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Logo -->
+            <div class="logo text-center">
+              <img class="logo-itself" src="/bigIcon.8816b244.png" alt="logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- About Me -->
+  <section class="about" id="ABOUT">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2> About Me </h2>
+          </div>
+          <img src="/profile.157bb0a7.jpeg" alt="profile" class="profile">
+          <h1>Hello!</h1>
+          <p>My name is Ifat.</p>
+          <div id="title"></div>
+          <p>I'm always looking forward to working on meaningful projects.</p>
+          <p>I live in Petah-Tiqwa, and code every day.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- toggle show cv -->
+    <div id="cv-toggle"></div>
+
+    <!-- download-cv -->
+    <div class="download-cv-form wow bounceIn">
+      <div class="container">
+        <form method="get" action="assets/CV - Ifat Ori.docx">
+          <button type="submit" class="btn btn-default submit-btn download-cv-form-button">Download My CV</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Projects -->
+  <section class="projects" id="PROJECTS">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2> Highlighted Projects </h2>
+          </div>
+          <div id="projects"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Me -->
+  <section class="contact-me" id="CONTACT">
+    <div class="container wow bounceIn">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="section-title">
+            <h2>Contact Me</h2>
+          </div>
+          <p>Feel free to send me a message.</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-me-form wow bounceIn">
+      <div class="container">
+        <form role="form" id="contact" method="post" onsubmit="sendMail();" enctype="text/plain">
+          <div class="row">
+            <div class="col-md-4">
+              <input type="text" class="form-control" id="contact_name" placeholder="Name">
+              <input type="email" class="form-control" id="contact_email" placeholder="Email Address">
+              <input type="text" class="form-control" id="subject" placeholder="Subject">
+            </div>
+            <div class="col-md-8">
+              <textarea class="form-control" id="message" rows="25" cols="10" placeholder="Message"></textarea>
+              <button type="submit" class="btn btn-default submit-btn form form_submit">SEND</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Social -->
+    <div id="social" class="wow bounceInLeft"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="FOOTER">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="copyright">
+            <p>Copyright &copy; 2019</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="scroll-top">
+            <a href="#HOME"><i class="fa fa-angle-up"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap Javascript -->
+  <script>function sendMail() {
+      console.log('sending');
+      var name = $('#contact #contact_name').val();
+      var email = $('#contact #contact_email').val();
+      var subject = $('#contact #subject').val();
+      var message = $('#message').val();
+      window.open('mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message);
+      /* window.location.href = 'mailto:ifat.email@gmail.com?subject=' + subject + ' - ' + name + ' (' + email + ')' + '&body=' + message; */
+
+      return false;
+    }
+
+    ;</script>
+  <script src="/src.e31bb0bc.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- wow js lib -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <!-- Custom JS -->
+  <script src="/custom.7785c346.js"></script>
+</body>
+
+</html>
